@@ -142,6 +142,10 @@ object ScalaFunctions {
     s1 + s2
   }
 
+
+  //定义闭包
+  def add(more:Int) = (x:Int) =>  x +more
+
   def main(args: Array[String]): Unit = {
     println("hello world ...")
     val test = new Test
@@ -184,6 +188,13 @@ object ScalaFunctions {
     val str1:String = "Hello, "
     val str2:String = "Scala!"
     println( "str1 + str2 = " +  strcat(str1)(str2) )
+
+    //闭包函数
+    println("*"*10)
+    val a = add(1)
+    println(a(10))
+    val b = add(1000)
+    println(b(10))
 
   }
 
